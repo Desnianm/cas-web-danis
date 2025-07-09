@@ -59,6 +59,8 @@ h1 {
 
 .cas-img {
   width: 200px;
+    max-width: 100%;
+  height: auto; 
   border-radius: 10px;
   margin: 20px 0;
   box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05);
@@ -132,4 +134,36 @@ body {
   color: rgba(255, 255, 255, 0.4);
   z-index: 3;
   pointer-events: none;
+}
+@media (max-width: 600px) {
+  .container {
+    width: 90%;
+    padding: 20px;
+  }
+}
+
+  .card h1 {
+    font-size: 1.2em;
+  }
+
+  .card p {
+    font-size: 0.9em;
+    text-align: center;
+  }
+
+  #playButton {
+    font-size: 0.9em;
+    padding: 0.5em 1em;
+  }
+
+  .quote {
+    font-size: 0.8em;
+    max-width: 80%;
+    word-wrap: break-word;
+  }
+
+  .watermark {
+    font-size: 0.7em;
+    right: 10px;
+  }
 }
