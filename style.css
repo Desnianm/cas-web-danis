@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Playfair Display', serif;
+  background: #111;
+  color: white;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.fog {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: url('https://i.ibb.co/q9kzJxM/fog.png') repeat;
+  background-size: cover;
+  opacity: 0.03;
+  animation: fogMove 60s linear infinite;
+  z-index: 0;
+}
+
+@keyframes fogMove {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -1000px 0;
+  }
+}
+
+
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  z-index: 1;
+  backdrop-filter: blur(5px);
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #eaeaea;
+}
+
+.cas-img {
+  width: 200px;
+  border-radius: 10px;
+  margin: 20px 0;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05);
+  transition: transform 0.5s ease;
+}
+
+.cas-img:hover {
+  transform: scale(1.05) rotate(-1deg);
+}
+
+.desc {
+  font-size: 1.1em;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+button {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #fff;
+  padding: 12px 24px;
+  font-size: 1em;
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 0 10px rgba(255,255,255,0.2);
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 20px rgba(255,255,255,0.5);
+  transform: scale(1.1);
+}
+
+canvas#stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+
+
+body {
+  cursor: url('https://cur.cursors-4u.net/others/oth-1/oth37.cur'), auto;
+}
+
+
+.quote {
+  position: absolute;
+  font-size: 1em;
+  font-style: italic;
+  color: #ccc;
+  z-index: 2;
+  transition: all 1.5s ease;
+  opacity: 0.8;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
+.watermark {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  font-size: 0.85em;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.4);
+  z-index: 3;
+  pointer-events: none;
+}
