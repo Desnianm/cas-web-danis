@@ -10,7 +10,6 @@ const quotes = [
 function updateQuote() {
   const box = document.getElementById('quoteBox');
   const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-
   const randomX = Math.floor(Math.random() * (window.innerWidth - 200));
   const randomY = Math.floor(Math.random() * (window.innerHeight - 100));
 
@@ -23,8 +22,8 @@ function updateQuote() {
     box.style.opacity = 0.85;
   }, 200);
 }
-
 setInterval(updateQuote, 7000);
+
 
 
 let audio = new Audio('Apocalypse.mp3');
@@ -43,6 +42,7 @@ playButton.addEventListener('click', () => {
     isPlaying = false;
   }
 });
+
 window.addEventListener('load', () => {
   audio.play().then(() => {
     isPlaying = true;
@@ -84,6 +84,9 @@ function animateStars() {
   requestAnimationFrame(animateStars);
 }
 animateStars();
+
+
+
 function toggleList(header) {
   const albumDiv = header.parentElement;
   const list = albumDiv.querySelector("ul");
@@ -95,3 +98,21 @@ function toggleList(header) {
   }
 }
 
+
+const ambient = document.getElementById("ambientSound");
+if (ambient) {
+  ambient.volume = 0.1;
+}
+
+
+const toggleBtn = document.getElementById('toggleMode');
+toggleBtn.addEventListener('click', () => {
+  document.body.classList.toggle('light-mode');
+
+ 
+  if (document.body.classList.contains('light-mode')) {
+    toggleBtn.textContent = "🌙 Dark / ☀️ Light";
+  } else {
+    toggleBtn.textContent = "☀️ Light /🌙 Dark";
+  }
+});
