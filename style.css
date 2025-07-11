@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
 * {
@@ -10,13 +14,12 @@ body {
   font-family: 'Playfair Display', serif;
   background: #111;
   color: white;
-  overflow: hidden;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
   position: relative;
 }
+
 
 .fog {
   position: absolute;
@@ -282,5 +285,73 @@ body {
 
   .members li {
     font-size: 0.85em;
+  }
+}
+.album ul {
+  margin-top: 10px;
+  list-style: none;
+  padding-left: 0;
+  display: none;
+  animation: fadeIn 0.4s ease;
+}
+
+.album ul li {
+  color: #ccc;
+  padding: 5px 0;
+  font-size: 0.95em;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+  .why-cas {
+  margin: 80px 20px 100px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.05);
+  animation: shimmer 10s infinite alternate;
+}
+
+.why-cas h2 {
+  font-size: 1.6em;
+  color: #fff;
+  margin-bottom: 10px;
+  animation: glowText 4s ease-in-out infinite alternate;
+}
+
+.why-cas p {
+  font-size: 1em;
+  color: #ccc;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Glow Text Animation */
+@keyframes glowText {
+  from {
+    text-shadow: 0 0 5px #888;
+  }
+  to {
+    text-shadow: 0 0 15px #ffffff66, 0 0 25px #ffffff33;
+  }
+}
+
+/* Shimmer Background */
+@keyframes shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
   }
 }

@@ -85,6 +85,13 @@ function animateStars() {
 }
 animateStars();
 function toggleList(header) {
-  const ul = header.nextElementSibling;
-  ul.style.display = ul.style.display === "block" ? "none" : "block";
+  const albumDiv = header.parentElement;
+  const list = albumDiv.querySelector("ul");
+
+  if (list.style.display === "block") {
+    list.style.display = "none";
+  } else {
+    list.style.display = "block";
+  }
 }
+
