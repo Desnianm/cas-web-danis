@@ -166,4 +166,121 @@ body {
     font-size: 0.7em;
     right: 10px;
   }
+.albums {
+  margin-top: 60px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+  text-align: center;
+}
 
+.albums h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #eee;
+}
+
+.album {
+  margin-bottom: 30px;
+}
+
+.album h3 {
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.3em;
+  transition: 0.3s;
+}
+
+.album h3:hover {
+  color: #bbb;
+}
+
+.album ul {
+  margin-top: 10px;
+  list-style: none;
+  padding-left: 0;
+  display: none;
+  animation: fadeIn 0.8s ease;
+}
+
+.album ul li {
+  padding: 5px 0;
+  color: #ccc;
+  font-size: 0.95em;
+}
+
+
+@media (max-width: 600px) {
+  .albums h2 {
+    font-size: 1.5em;
+  }
+
+  .album h3 {
+    font-size: 1.1em;
+  }
+
+  .album ul li {
+    font-size: 0.9em;
+  }
+}
+.band-profile {
+  margin-top: 60px;
+  text-align: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+}
+
+.band-img {
+  width: 200px;
+  max-width: 80%;
+  margin: 20px 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+}
+
+.bio {
+  font-size: 1em;
+  color: #ccc;
+  margin-bottom: 20px;
+  line-height: 1.6em;
+}
+
+.members {
+  list-style: none;
+  padding: 0;
+  color: #eee;
+  font-size: 0.95em;
+}
+
+.members li {
+  padding: 6px 0;
+}
+
+.album-img {
+  width: 160px;
+  margin: 10px auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.05);
+}
+
+
+
+@media (max-width: 600px) {
+  .band-profile h2 {
+    font-size: 1.5em;
+  }
+
+  .album-img {
+    width: 80%;
+  }
+
+  .bio {
+    font-size: 0.9em;
+  }
+
+  .members li {
+    font-size: 0.85em;
+  }
+}

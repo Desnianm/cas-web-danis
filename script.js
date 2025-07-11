@@ -84,3 +84,7 @@ function animateStars() {
   requestAnimationFrame(animateStars);
 }
 animateStars();
+function toggleList(header) {
+  const ul = header.nextElementSibling;
+  ul.style.display = ul.style.display === "block" ? "none" : "block";
+}
